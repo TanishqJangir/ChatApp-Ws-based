@@ -32,7 +32,7 @@ ws.on("connection", (socket) => {
     })
 
 
-    socket.on("disconnect", () => {
+    socket.on("close", () => {
         allSockets = allSockets.filter((x) => x.socket != socket)
     })
 
